@@ -10,7 +10,10 @@ public class Cavalier extends Piece {
 
     @Override
     public boolean estValide(Deplacement dep, Plateau p) {
-        // TODO Auto-generated method stub
-        return false;
+        super.estValide(dep, p);
+        if (dep.typeDeplacement() == 'c')
+            return true;
+        else
+            return false;
     }
 }

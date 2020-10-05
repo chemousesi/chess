@@ -10,7 +10,13 @@ public class Roi extends Piece {
 
     @Override
     public boolean estValide(Deplacement dep, Plateau p) {
-        // TODO Auto-generated method stub
-        return false;
+
+        super.estValide(dep, p);
+
+        if (dep.dist() == 1)
+            return true;
+        else
+            return false;
+
     }
 }

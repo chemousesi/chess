@@ -59,11 +59,14 @@ public class Plateau {
     }
 
     public void afficher() {
-
-        System.out.println(" here :" + this.largeur);
-        System.out.println(" here :" + this.longueur);
+        System.out.print("   ");
+        for (int i = 0; i < cases.length; i++) {
+            System.out.print(" " + i + " |");
+        }
+        System.out.println("\n  ----------------------------------");
 
         for (int i = 0; i < this.longueur; i++) {
+            System.out.print(i + " | ");
             for (int j = 0; j < this.largeur; j++) {
                 System.out.print(cases[i][j] + " | ");
             }
@@ -81,29 +84,32 @@ public class Plateau {
         remplirCase(0, 2, new Fou(true));
         remplirCase(0, 3, new Dame(true));
         remplirCase(0, 4, new Roi(true));
+        remplirCase(0, 5, new Fou(true));
+        remplirCase(0, 6, new Cavalier(true));
+        remplirCase(0, 7, new Tour(true));
 
         // deuxième ligne
-        remplirCase(1, 0, new Pion(true));
-        remplirCase(1, 1, new Pion(true));
-        remplirCase(1, 2, new Pion(true));
-        remplirCase(1, 3, new Pion(true));
-        remplirCase(1, 4, new Pion(true));
+        for (int i = 0; i < 8; i++) {
+            remplirCase(1, i, new Pion(true));
+        }
 
         /******** */
 
         // côté noir
-        remplirCase(4, 0, new Tour(false));
-        remplirCase(4, 1, new Cavalier(false));
-        remplirCase(4, 2, new Fou(false));
-        remplirCase(4, 3, new Dame(false));
-        remplirCase(4, 4, new Roi(false));
+        remplirCase(7, 0, new Tour(false));
+        remplirCase(7, 1, new Cavalier(false));
+        remplirCase(7, 2, new Fou(false));
+        remplirCase(7, 3, new Dame(false));
+        remplirCase(7, 4, new Roi(false));
+        remplirCase(7, 5, new Fou(false));
+        remplirCase(7, 6, new Cavalier(false));
+        remplirCase(7, 7, new Tour(false));
 
         // deuxième ligne
-        remplirCase(3, 0, new Pion(false));
-        remplirCase(3, 1, new Pion(false));
-        remplirCase(3, 2, new Pion(false));
-        remplirCase(3, 3, new Pion(false));
-        remplirCase(3, 4, new Pion(false));
+
+        for (int i = 0; i < 8; i++) {
+            remplirCase(6, i, new Pion(false));
+        }
 
     }
 }

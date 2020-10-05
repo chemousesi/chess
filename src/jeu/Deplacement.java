@@ -48,6 +48,20 @@ public class Deplacement {
 
         }
     }
+    //
+    // public boolean caseSurChemin(Plateau p)
+    // // renvoie true s'il y'a une case sur me chemin
+    // {
+    //
+    // for (int l = x0; l < x1; l++) {
+    // for (int c = y0; c < y1; c++) {
+    // if (!p.getCase(l, c).estVide()) {
+    // return true;
+    // } else
+    // return false;
+    // }
+    // }
+    // }
 
     public int getX0() {
         return x0;

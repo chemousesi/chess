@@ -14,11 +14,14 @@ public class Pion extends Piece {
 
         Case caseCible = p.getCase(dep.getX1(), dep.getY1());
 
-        if ((dep.typeDeplacement() != 'v') || (dep.dist() != 1))
+        if ((dep.typeDeplacement() != 'v') || (dep.dist() != 1)) {
+            System.out.println("déplacement non vertical ou il dépasse une distance d'une case");
             return false;
-        else if ((dep.typeDeplacement() == 'd') && (caseCible.getPiece().couleur != this.couleur))
+
+        } else if ((dep.typeDeplacement() == 'd') && (caseCible.getPiece().couleur != this.couleur)) {
+            System.out.println("pas de déplacement diagonal sauf dans le cas ou manger une pièce adversaire");
             return true;
-        else
-            return false;
+        } else
+            return true;
     }
 }
