@@ -39,7 +39,8 @@ public class Plateau {
     }
 
     public boolean horsLimite(Deplacement deplacement) {
-        if ((deplacement.x1 < 0) || (deplacement.x1 > longueur) || (deplacement.y1 < 0) || (deplacement.y1 > largeur))
+        if ((deplacement.getX1() < 0) || (deplacement.getX1() > longueur) || (deplacement.getY1() < 0)
+                || (deplacement.getY1() > largeur))
             return true;
         else
             return false;

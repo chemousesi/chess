@@ -1,6 +1,6 @@
 package pieces;
 
-import jeu.Deplacement;
+import jeu.*;
 
 public class Pion extends Piece {
 
@@ -9,8 +9,16 @@ public class Pion extends Piece {
     }
 
     @Override
-    public boolean estValide(Deplacement dep, Piece pi) {
-        // TODO Auto-generated method stub
-        return false;
+    public boolean estValide(Deplacement dep, Plateau p) {
+        super.estValide(dep, p);
+
+        Case caseCible = p.getCase(dep.getX1(), dep.getY1());
+
+        if ((dep.typeDeplacement() != 'v') || (dep.dist() != 1))
+            return false;
+        else if ((dep.typeDeplacement() == 'd') && (caseCible.getPiece().couleur != this.couleur))
+            return true;
+        else
+            return false;
     }
 }

@@ -1,7 +1,7 @@
 
 package pieces;
 
-import jeu.Deplacement;
+import jeu.*;
 
 public class Tour extends Piece {
 
@@ -10,8 +10,13 @@ public class Tour extends Piece {
     }
 
     @Override
-    public boolean estValide(Deplacement dep, Piece pi) {
-        // TODO Auto-generated method stub
-        return false;
+    public boolean estValide(Deplacement dep, Plateau p) {
+
+        super.estValide(dep, p);
+
+        if ((dep.typeDeplacement() != 'h') || (dep.typeDeplacement() != 'v'))
+            return false;
+        else
+            return true; // à revoir aussi pour le problème du chemin de déplacement
     }
 }

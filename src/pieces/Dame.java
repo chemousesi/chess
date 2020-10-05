@@ -1,6 +1,6 @@
 package pieces;
 
-import jeu.Deplacement;
+import jeu.*;
 
 public class Dame extends Piece {
 
@@ -9,7 +9,7 @@ public class Dame extends Piece {
     }
 
     @Override
-    public boolean estValide(Deplacement dep, Piece pi) {
+    public boolean estValide(Deplacement dep, Plateau p) {
         // TODO Auto-generated method stub
         return false;
     }

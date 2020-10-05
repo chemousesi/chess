@@ -1,7 +1,7 @@
 package jeu;
 
 public class Deplacement {
-    int x0, y0, x1, y1;
+    private int x0, y0, x1, y1;
     // dans cet exemple on va prendre les x commes les lignes et les y comme les
     // colonnes
 
@@ -47,6 +47,22 @@ public class Deplacement {
                 return -1;
 
         }
+    }
+
+    public int getX0() {
+        return x0;
+    }
+
+    public int getX1() {
+        return x1;
+    }
+
+    public int getY0() {
+        return y0;
+    }
+
+    public int getY1() {
+        return y1;
     }
 
 }

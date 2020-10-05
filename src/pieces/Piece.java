@@ -2,7 +2,7 @@ package pieces;
 
 import jeu.*;
 
-public abstract class Piece {
+public class Piece {
 
     boolean couleur;
     String nom;
@@ -23,6 +23,18 @@ public abstract class Piece {
 
     }
 
-    public abstract boolean estValide(Deplacement dep, Piece pi);
+    public boolean estValide(Deplacement dep, Plateau p) {
+        // une pièce ne peut pas se déplacer vers une case occupée par une pièce de la
+        // même coueleur // à implémenter ici
+
+        Case caseCible = p.getCase(dep.getX1(), dep.getY1());
+
+        if (p.horsLimite(dep))
+            return false;
+        else if (caseCible.getPiece().couleur == this.couleur)
+            return false;
+        else
+            return true;
+    }
 
 }
