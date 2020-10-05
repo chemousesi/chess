@@ -1,3 +1,5 @@
+package jeu;
+
 public class Deplacement {
     int x0, y0, x1, y1;
     // dans cet exemple on va prendre les x commes les lignes et les y comme les

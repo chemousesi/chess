@@ -1,3 +1,5 @@
+package jeu;
+
 public class Echecs {
 
     static Plateau p = new Plateau(5, 5);

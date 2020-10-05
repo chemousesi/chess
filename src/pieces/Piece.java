@@ -1,6 +1,8 @@
-package Pieces;
+package pieces;
 
-public class Piece {
+import jeu.*;
+
+public abstract class Piece {
 
     boolean couleur;
     String nom;
@@ -20,5 +22,7 @@ public class Piece {
         }
 
     }
+
+    public abstract boolean estValide(Deplacement dep, Piece pi);
 
 }

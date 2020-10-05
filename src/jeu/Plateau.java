@@ -1,4 +1,6 @@
-import Pieces.*;
+package jeu;
+
+import pieces.*;
 
 public class Plateau {
 
