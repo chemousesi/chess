@@ -79,7 +79,8 @@ public class Echecs {
             // Shah Mat !!!
             {
                 System.out.println("fin de partie");
-                System.out.println("le joueur " + joueur + " a gagné cette partie");
+                System.out.println(
+                        "le joueur avec les pièces " + ((joueur) ? "blanches" : "noires") + " a gagné cette partie");
                 stop = true; // on arrêtele jeu
             } else
                 joueur = !joueur;// pour alterner les tours
