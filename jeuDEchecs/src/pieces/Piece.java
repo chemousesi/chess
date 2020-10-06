@@ -63,4 +63,8 @@ public class Piece {
 
     }
 
+    public boolean estRoi() {
+        return false;
+    }
+
 }

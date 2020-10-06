@@ -19,4 +19,9 @@ public class Roi extends Piece {
             return false;
 
     }
+
+    @Override
+    public boolean estRoi() {
+        return true;
+    }
 }

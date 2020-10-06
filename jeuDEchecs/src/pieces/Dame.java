@@ -11,7 +11,13 @@ public class Dame extends Piece {
     @Override
     public boolean estValide(Deplacement dep, Plateau p) {
         super.estValide(dep, p);
-        return true;
+
+        if ((dep.typeDeplacement() == 'd') || (dep.typeDeplacement() == 'h') || (dep.typeDeplacement() == 'v')) {
+            return true;
+        } else {
+            System.out.println("Deplacement non valide pour la Dame");
+            return false;
+        }
 
     }
 }
